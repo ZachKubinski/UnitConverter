@@ -23,8 +23,8 @@
             <div id ="col5" class="col-sm-2">&nbsp;</div>
             <div id ="col6" class="col-sm-2">&nbsp;</div>
         </div>
-        <div id="tabs" class="row">
-            <div id="buttonColumn" class="col-lg-2">
+        <div class="row">
+            <div id="tabs" class="col-lg-2">
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="home">Home</button>
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="conv1">BillyConverter</button>
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="conv2">Human Years to Dog Years</button>
@@ -78,8 +78,10 @@
             },
             conv4: function () {
                 window.location = '/thomasconversion.html'
+            },
+            conv5: function () {
+                window.location = '/zachsconversion.html'
             }
         }
-
     })
 </script>
