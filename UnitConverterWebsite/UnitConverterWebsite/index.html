@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="StyleSheet.css">
     <meta charset="utf-8" />
     <div class="row"></div>
-    <div class="col" style="background-color:deepskyblue;color:deepskyblue;font-size:32px">hi</div>
+    <div class="col" style="background-color:deepskyblue;font-size:48px">&nbsp;</div>
     <div class="page-header">
         <h1>Unit Conversions</h1>
     </div>
@@ -32,7 +32,15 @@
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="conv4">ThomasConverter</button>
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="conv5">24 Hour Time to Military Time</button>
             </div>
-            <div class="col-lg-2" style="background-color:#ffffff;color:#ffffff">col-lg-10</div>
+            <div class="col-lg-2" style="background-color:#ffffff;color:#ffffff";height="100vh">
+                <h2>
+                Label
+                </h2>
+                <div id="app">
+                <input v-model="inputValue" />
+                <p>{{outputValue}}</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -75,11 +83,3 @@
 
     })
 </script>
-            <div class="col-lg-2" style="background-color:#ffffff;color:#000000">
-                <h2>Label 
-                </h2>
-                <div id="app">
-                    <input v-model="inputValue" />
-                    <p>{{outputValue}}</p>
-                </div>
-            </div>
