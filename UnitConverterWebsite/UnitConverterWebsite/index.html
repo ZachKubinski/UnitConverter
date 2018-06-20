@@ -3,6 +3,7 @@
 <head>
     <link href="Scripts/bootstrap.css" rel="stylesheet" />
     <script src="bootstrap.js"></script>
+    <script src="Scripts/vue.js"></script>
     <link rel="stylesheet" type="text/css" href="StyleSheet.css">
     <meta charset="utf-8" />
     <div class="row"></div>
@@ -13,16 +14,6 @@
     <title></title>
 </head>
 <body>
-    <t1>Unit Converter</t1>
-    <p></p>
-    <button>Celsius to Kelvin</button>
-    <a href="/billysconversion.html">Billys conversion</a>
-    <p></p>
-    <button>Human Years to Dog</button>
-    <p></p>
-    <button>___ to ___</button>
-    <p></p>
-    <button>___ to ___</button>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-2" style="background-color:#216369;color:#216369">col-sm-2</div>
@@ -37,44 +28,39 @@
             <div class="col-lg-2" style="background-color:#ffffff;color:#ffffff">col-lg-10</div>
         </div>
     </div>
-
-
     <div id="tabs">
         <button v-on:click="home">Home</button>
         <button v-on:click="conv1">BillyConverter</button>
         <button v-on:click="conv2">EmilyConverter</button>
         <button v-on:click="conv3">KevinConverter</button>
         <button v-on:click="conv4">ThomasConverter</button>
-        <button v-on:click="conv5">ZackConverter</button>
+        <button v-on:click="conv5">ZachConverter</button>
     </div>
-    <script src="Scripts/vue.js"></script>
-    <script>
-        var tabs = new Vue({
-            el: '#tabs',
-            data: {
-
-            },
-            methods: {
-                home: function () {
-                    window.location = '/index.html'
-                },
-                conv1: function () {
-                    window.location = '/billysconversion.html'
-                },
-                conv2: function () {
-                    window.location = '/emilysconversion.html'
-                },
-                conv3: function () {
-                    window.location = '/kevinsconversion.html'
-                },
-                conv4: function () {
-                    window.location = '/thomasconversion.html'
-                }
-            }
-
-        })
-        
-    </script>
 </body>
 </html>
-<script src="https://unpkg.com/vue"></script>
+<script>
+    var tabs = new Vue({
+        el: '#tabs',
+        data: {
+
+        },
+        methods: {
+            home: function () {
+                window.location = '/index.html'
+            },
+            conv1: function () {
+                window.location = '/billysconversion.html'
+            },
+            conv2: function () {
+                window.location = '/emilysconversion.html'
+            },
+            conv3: function () {
+                window.location = '/kevinsconversion.html'
+            },
+            conv4: function () {
+                window.location = '/thomasconversion.html'
+            }
+        }
+
+    })
+</script>
