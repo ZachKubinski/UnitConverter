@@ -1,3 +1,19 @@
 ﻿body {
-
+﻿  
+﻿}
+h1{
+      font-size: 30px;
+      font-family: Georgia;
+      color: black;
+  }
+h2{
+    font-size: 18px;
+    font-family: Cambria;
+    color: black;
 }
+p{
+    font-size: 12px;
+    font-family: Cambria;
+    color : darkcyan;
+}
+
