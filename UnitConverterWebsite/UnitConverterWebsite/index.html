@@ -33,7 +33,14 @@
                 <button v-on:click="conv4">ThomasConverter</button>
                 <button v-on:click="conv5">ZachConverter</button>
             </div>
-            <div class="col-lg-2" style="background-color:#ffffff;color:#ffffff">col-lg-10</div>
+            <div class="col-lg-2" style="background-color:#ffffff;color:#000000">
+                <h2>Label 
+                </h2>
+                <div id="app">
+                    <input v-model="inputValue" />
+                    <p>{{outputValue}}</p>
+                </div>
+            </div>
         </div>
     </div>
     <div id="tabs">
@@ -42,6 +49,18 @@
 </body>
 </html>
 <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            inputValue: "",
+            outputValue: ""
+        },
+        methods: {
+            conversion : function () {
+
+            }
+        }
+    })
     var tabs = new Vue({
         el: '#tabs',
         data: {
