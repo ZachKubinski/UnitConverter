@@ -17,6 +17,43 @@
     <button>___ to ___</button>
     <p></p>
     <button>___ to ___</button>
+
+    <div id="tabs">
+        <button v-on:click="home">Home</button>
+        <button v-on:click="conv1">BillyConverter</button>
+        <button v-on:click="conv2">EmilyConverter</button>
+        <button v-on:click="conv3">KevinConverter</button>
+        <button v-on:click="conv4">ThomasConverter</button>
+        <button v-on:click="conv5">ZackConverter</button>
+    </div>
+    <script src="Scripts/vue.js"></script>
+    <script>
+        var tabs = new Vue({
+            el: '#tabs',
+            data: {
+
+            },
+            methods: {
+                home: function () {
+                    window.location = '/index.html'
+                },
+                conv1: function () {
+                    window.location = '/billysconversion.html'
+                },
+                conv2: function () {
+                    window.location = '/emilysconversion.html'
+                },
+                conv3: function () {
+                    window.location = '/kevinsconversion.html'
+                },
+                conv4: function () {
+                    window.location = '/thomasconversion.html'
+                }
+            }
+
+        })
+        
+    </script>
 </body>
 </html>
 <script src="https://unpkg.com/vue"></script>
