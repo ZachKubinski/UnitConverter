@@ -24,25 +24,22 @@
             <div id ="col6" class="col-sm-2">&nbsp;</div>
         </div>
         <div class="row">
-            <div id="tabs" class="col-lg-2">
-                <button button type="button" class="btn btn-primary btn-block" v-on:click="home">Home</button>
-                <button button type="button" class="btn btn-primary btn-block" v-on:click="conv1">BillyConverter</button>
-                <button button type="button" class="btn btn-primary btn-block" v-on:click="conv2">Human Years to Dog Years</button>
-                <button button type="button" class="btn btn-primary btn-block" v-on:click="conv3">Celsius to Kelvin</button>
-                <button button type="button" class="btn btn-primary btn-block" v-on:click="conv4">ThomasConverter</button>
-                <button button type="button" class="btn btn-primary btn-block" v-on:click="conv5">24 Hour Time to Military Time</button>
-            </div>
-            <div class="col-lg-2">
-                <h2>
-                Label
-                </h2>
-                <div id="app">
-                <input v-model="inputValue" />
-                <p>{{outputValue}}</p>
+            <div id="tabs" class="col">
+                <div class="col-sm-4">
+                    <button button type="button" class="btn btn-other btn-block" v-on:click="home">Home</button>
+                    <button button type="button" class="btn btn-other btn-block" v-on:click="conv1">BillyConverter</button>
                 </div>
+                <div class="col-sm-4">
+                    <button button type="button" class="btn btn-other btn-block" v-on:click="conv2">Human Years to Dog Years</button>
+                    <button button type="button" class="btn btn-other btn-block" v-on:click="conv3">Celsius to Kelvin</button>
+                </div>
+                <div class="col-sm-4">
+                    <button button type="button" class="btn btn-other btn-block" v-on:click="conv4">ThomasConverter</button>
+                    <button button type="button" class="btn btn-other btn-block" v-on:click="conv5">24 Hour Time to Military Time</button>
+                </div>
+
             </div>
         </div>
-    </div>
 </body>
 </html>
 <script>
