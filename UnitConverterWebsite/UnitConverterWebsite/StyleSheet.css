@@ -16,7 +16,14 @@ p{
     color : darkcyan;
 }
 .btn-primary {
-    background-color: #408c8c !important
+    background-color: #408c8c !important;
+    height: 65px;
+}
+.btn-other {
+    background-color: #408c8c !important;
+    font-size: 28px;
+    height: 200px;
+    color:white;
 }
 #col1 {
     background-color: #216369;
@@ -40,4 +47,5 @@ p{
     background-color: #216369;
     height: 100vh;
 }
+
 
