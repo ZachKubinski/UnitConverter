@@ -35,9 +35,8 @@
             <div class="col-lg-2" height="100vh">
                 <h2>24 Hour Time to Military Time</h2>
                 <div id="app">
-                    <input v-model="inputValue" placeholder="Enter 24 Hour Time" />
-                    <button button type="button" class="btn-primary" v-on:click="converion">Convert</button>
-                    <p>{{outputValue}}</p>
+                    <input v-model="inputValue" v-on:keyup="conversion"/>
+                    <p>Conversion: {{outputValue}}</p>
                 </div>
             </div>
         </div>
@@ -49,12 +48,15 @@
         el: '#app',
         data: {
             inputValue: "",
-            outputValue: ""
+            outputValue: 0
         },
         methods: {
             conversion: function () {
                 if (this.inputValue > 12) {
-                    this.outputValue = this.inputValue - 12
+                    this.outputValue = Number(this.inputValue) - 12;
+                }
+                else {
+                    this.outputValue = Number(this.inputValue);
                 }
             }
         }
