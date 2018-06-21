@@ -34,10 +34,10 @@
             </div>
             <div class="col-lg-2" height="100vh">
                 <h2>
-                    Label
+                    Celsius to Kelvin
                 </h2>
                 <div id="app">
-                    <input v-model="inputValue" />
+                    <input v-model="inputValue" v-on:keyup="conversion"/>
                     <p>{{outputValue}}</p>
                 </div>
             </div>
@@ -54,7 +54,7 @@
         },
         methods: {
             conversion: function () {
-
+                this.outputValue = (Number(this.inputValue) + 273.15);
             }
         }
     })
