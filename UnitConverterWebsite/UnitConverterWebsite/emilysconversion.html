@@ -32,13 +32,13 @@
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="conv4">ThomasConverter</button>
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="conv5">24 Hour Time to Military Time</button>
             </div>
-            <div class="col-lg-2" height="100vh">
+            <div class="col-lg-2">
                 <h2>
-                    Human to Dog Years
+                Human to Dog Years
                 </h2>
                 <div id="app">
-                    <input v-model="inputValue" v-on:keyup="conversion"/>
-                    <p>{{outputValue}}</p>
+                <input v-model="inputValue" v-on:keyup="conversion"/>
+                <p>{{outputValue}}</p>
                 </div>
             </div>
         </div>
@@ -78,6 +78,9 @@
             },
             conv4: function () {
                 window.location = '/thomasconversion.html'
+            },
+            conv5: function () {
+                window.location = '/zachsconversion.html'
             }
         }
 
