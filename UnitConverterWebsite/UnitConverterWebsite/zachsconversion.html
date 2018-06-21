@@ -34,9 +34,10 @@
             </div>
             <div class="col-lg-2" height="100vh">
                 <h2>24 Hour Time to Military Time</h2>
+                <h3>Enter Time Here: </h3>
                 <div id="app">
-                    <input v-model="inputValue" v-on:keyup="conversion"/>
-                    <p>Conversion: {{outputValue}}</p>
+                    <input v-model="inputValue" v-on:keyup="conversion" placeholder="#AM"/>
+                    <p>Conversion: {{outputValue}} {{amOrPm}}</p>
                 </div>
             </div>
         </div>
@@ -48,15 +49,25 @@
         el: '#app',
         data: {
             inputValue: "",
-            outputValue: 0
+            outputValue: "",
+            amOrPm: " AM"
         },
         methods: {
             conversion: function () {
-                if (this.inputValue > 12) {
+                if (Number(this.inputValue) > 24) {
+                    outputValue = "Invalid Time";
+                }
+                else if (this.inputValue > 12) {
                     this.outputValue = Number(this.inputValue) - 12;
+                    this.amOrPm = " PM";
+                }
+                else if (this.inputValue == 12) {
+                    this.outputValue = Number(this.inputValue);
+                    this.amOrPm = " PM";
                 }
                 else {
                     this.outputValue = Number(this.inputValue);
+                    this.amOrPm = " AM";
                 }
             }
         }
