@@ -2,18 +2,18 @@
 <html>
 <head>
     <link href="Scripts/bootstrap.css" rel="stylesheet" />
-    <script src="bootstrap.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/vue.js"></script>
     <link rel="stylesheet" type="text/css" href="StyleSheet.css">
     <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
     <div class="row"></div>
     <div class="col" style="background-color:deepskyblue;font-size:48px">&nbsp;</div>
     <div class="page-header">
         <h1>Unit Conversions</h1>
     </div>
-    <title></title>
-</head>
-<body>
     <div class="container-fluid">
         <div class="row">
             <div id="col1" class="col-sm-2">&nbsp;</div>
@@ -33,11 +33,10 @@
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="conv5">24 Hour Time to Military Time</button>
             </div>
             <div class="col-lg-2" height="100vh">
-                <h2>
-                    Label
-                </h2>
+                <h2>24 Hour Time to Military Time</h2>
                 <div id="app">
-                    <input v-model="inputValue" />
+                    <input v-model="inputValue" placeholder="Enter 24 Hour Time" />
+                    <button button type="button" class="btn-primary" v-on:click="converion">Convert</button>
                     <p>{{outputValue}}</p>
                 </div>
             </div>
@@ -54,7 +53,9 @@
         },
         methods: {
             conversion: function () {
-
+                if (this.inputValue > 12) {
+                    this.outputValue = this.inputValue - 12
+                }
             }
         }
     })
