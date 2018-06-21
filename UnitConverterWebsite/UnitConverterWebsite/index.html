@@ -16,15 +16,15 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-2" style="background-color:#216369;color:#216369">&nbsp;</div>
-            <div class="col-sm-2" style="background-color:#207979;color:#207979">&nbsp;</div>
-            <div class="col-sm-2" style="background-color:#408c8c;color:#408c8c">&nbsp;</div>
-            <div class="col-sm-2" style="background-color:#7fb2b2;color:#7fb2b2">&nbsp;</div>
-            <div class="col-sm-2" style="background-color:#9ec5c5;color:#9ec5c5">&nbsp;</div>
-            <div class="col-sm-2" style="background-color:#bed8d8;color:#bed8d8">&nbsp;</div>
+            <div id ="col1" class="col-sm-2">&nbsp;</div>
+            <div id ="col2" class="col-sm-2">&nbsp;</div>
+            <div id ="col3" class="col-sm-2">&nbsp;</div>
+            <div id ="col4" class="col-sm-2">&nbsp;</div>
+            <div id ="col5" class="col-sm-2">&nbsp;</div>
+            <div id ="col6" class="col-sm-2">&nbsp;</div>
         </div>
-        <div id="tabs" class="row">
-            <div class="col-lg-2" style="background-color:#216369;color:#216369;height:100vh;">
+        <div class="row">
+            <div id="tabs" class="col-lg-2">
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="home">Home</button>
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="conv1">BillyConverter</button>
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="conv2">Human Years to Dog Years</button>
@@ -32,7 +32,7 @@
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="conv4">ThomasConverter</button>
                 <button button type="button" class="btn btn-primary btn-block" v-on:click="conv5">24 Hour Time to Military Time</button>
             </div>
-            <div class="col-lg-2" style="background-color:#ffffff;color:#ffffff";height="100vh">
+            <div class="col-lg-2" height="100vh">
                 <h2>
                 Label
                 </h2>
@@ -78,8 +78,10 @@
             },
             conv4: function () {
                 window.location = '/thomasconversion.html'
+            },
+            conv5: function () {
+                window.location = '/zachsconversion.html'
             }
         }
-
     })
 </script>
